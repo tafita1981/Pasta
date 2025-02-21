@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechInterviewAI</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>TechInterviewAI</h1>
+      <h2>Entrevista Ao Vivo</h2>
+    </header>
+    <main>
+      <p>
+        O Copiloto de Entrevista usa IA para fornecer suporte em tempo real durante suas entrevistas. Ele captura áudio, transcreve perguntas, analisa o contexto e fornece respostas personalizadas baseadas no seu currículo de Data Analyst/Developer. Com suporte multilíngue e análise contextual avançada.
+      </p>
+      <button class="config-button">Configurar</button>
+      <div class="demo-screen">
+        <p class="demo-text">Entrevistador:</p>
+        <p class="demo-question">Tell me about a challenging data analysis project you worked on recently.</p>
+        <p class="demo-response">Resposta Sugerida:</p>
+        <p class="demo-answer">
+          In my most recent project at [company from resume], I faced a challenge with inconsistent data from multiple sources. I implemented a data pipeline using Python and SQL that improved accuracy by 37%.
+        </p>
+      </div>
+    </main>
+    <nav class="bottom-nav">
+      <a href="/" class="nav-item">
+        <span>Home</span>
+      </a>
+      <a href="/settings" class="nav-item">
+        <span>Configurações</span>
+      </a>
+    </nav>
+  </div>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registrado'))
+        .catch(err => console.log('Erro ao registrar Service Worker:', err));
+    }
+  </script>
+</body>
+</html>
